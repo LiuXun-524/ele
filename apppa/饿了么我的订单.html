@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<style type="text/css">
+			.footer{
+				width: 100vw;
+				height: 13.5vw;
+				border-top: 1px solid #808080;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				display: flex;
+				justify-content: space-around;
+				background-color: white;
+			}
+			.wrapper{
+				width: 100vw;
+				height: 100vh;
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				overflow: auto;
+				height: 800vw;
+				background-color: rgb(246,246,246);
+			}
+			.item{
+				
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				color: #A0A0A0;
+				
+			}
+			.footer .item i{
+				font-size: 5.5vw;
+				
+			}
+			.footer .item p{
+				font-size:3vw ;
+				
+			}
+			.footer .item:hover{
+				color: rgb(0,168,255);
+			}
+			.order_paper{
+				width: 100vw;
+				height: 41vw;
+				/* border: 1px solid black; */
+				background-color: white;
+				margin-top: 3vw;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.first{
+				height: 16vw;
+				width: 95vw;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				/* border: 1px solid black; */
+			}
+			.first .imgAndWord img{
+				width: 8vw;
+				height: 8vw;
+				margin-left: 5vw;
+			}
+			.first .imgAndWord{
+				display: flex;
+			}
+			.first .imgAndWord .first_word{
+				font-size: 4vw;
+				margin-left: 2vw;
+			}
+			.first .imgAndWord .first_word p i{
+				color: darkgray;
+			}
+			.first .imgAndWord .first_word .timee{
+				font-size: 2.8vw;
+				color: darkgray;
+			}
+			.first .first_state{
+				font-size: 3.8vw;
+				margin-right: 2vw;
+			}
+			.second{
+				height: 14vw;
+				width: 85vw;
+				font-size: 4vw;
+				display: flex;
+				/* border: 1px solid red; */
+				justify-content: space-between;
+				align-items: center;
+			}
+			.second .second_left{
+				color: rgb(102,102,102);
+			}
+			.third{
+				height: 12vw;
+				width: 85vw;
+				/* border: 1px solid blue; */
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				justify-content: space-around;
+			}
+			.third .third_right{
+				width: 19vw;
+				height: 8vw;
+				line-height: 8vw;
+				padding-left: 2vw;
+				font-size: 4vw;
+				border: 1px solid rgb(172,215,255);
+				color: rgb(35,149,255);
+			}
+			#dingdan {
+				color: rgb(35,149,255);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="order_paper">
+				<div class="first">
+					<div class="imgAndWord">
+						<img src="https://cube.elemecdn.com/a/32/25fe29dd4b6355a9017e2172908b8jpeg.jpeg?x-oss-process=image/format,webp/resize,w_64,h_64,m_fixed" >
+						<div class="first_word">
+							<p>桃太丸蛋包饭(浑南二小店)&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+							<p class="timee">2020-09-08&nbsp;&nbsp;19:36</p>
+						</div>
+					</div>
+					
+					<div class="first_state">
+						订单已送达
+					</div>
+				</div>
+				<hr style="width: 90vw;">
+				<div class="second">
+					<div class="second_left">黑胡椒蛋包饭</div>
+					<div>￥18.80</div>
+				</div>
+				<hr style="width: 90vw;">
+				<div class="third">
+					<div class="third_right">再来一单</div>
+					
+				</div>
+			</div>
+			<div class="order_paper">
+				<div class="first">
+					<div class="imgAndWord">
+						<img src="https://cube.elemecdn.com/6/E0/B363B5B654B2EBEDC36E58444BAECpng.png?x-oss-process=image/format,webp/resize,w_64,h_64,m_fixed" >
+						<div class="first_word">
+							<p>饭想你(沈营大街2店)&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+							<p class="timee">2020-09-08&nbsp;&nbsp;19:36</p>
+						</div>
+					</div>
+					
+					<div class="first_state">
+						订单超时
+					</div>
+				</div>
+				<hr style="width: 90vw;">
+				<div class="second">
+					<div class="second_left">肉末茄子</div>
+					<div>￥18.80</div>
+				</div>
+				<hr style="width: 90vw;">
+				<div class="third">
+					<div class="third_right">再来一单</div>
+					
+				</div>
+			</div>
+			<div class="order_paper">
+				<div class="first">
+					<div class="imgAndWord">
+						<img src="https://cube.elemecdn.com/2/8f/f95fb7943204e6151c1bad59d3429jpeg.jpeg?x-oss-process=image/format,webp/resize,w_64,h_64,m_fixed" >
+						<div class="first_word">
+							<p>地利生鲜(哈啤店)&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+							<p class="timee">2020-09-08&nbsp;&nbsp;19:36</p>
+						</div>
+					</div>
+					
+					<div class="first_state">
+						订单已送达
+					</div>
+				</div>
+				<hr style="width: 90vw;">
+				<div class="second">
+					<div class="second_left">香蕉等7件商品</div>
+					<div>￥18.80</div>
+				</div>
+				<hr style="width: 90vw;">
+				<div class="third">
+					<div class="third_right">再来一单</div>
+					
+				</div>
+			</div>
+		<div class="order_paper">
+			<div class="first">
+				<div class="imgAndWord">
+					<img src="https://cube.elemecdn.com/a/32/25fe29dd4b6355a9017e2172908b8jpeg.jpeg?x-oss-process=image/format,webp/resize,w_64,h_64,m_fixed" >
+					<div class="first_word">
+						<p>桃太丸蛋包饭(浑南二小店)&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+						<p class="timee">2020-09-08&nbsp;&nbsp;19:36</p>
+					</div>
+				</div>
+				
+				<div class="first_state">
+					订单已送达
+				</div>
+			</div>
+			<hr style="width: 90vw;">
+			<div class="second">
+				<div class="second_left">黑胡椒蛋包饭</div>
+				<div>￥18.80</div>
+			</div>
+			<hr style="width: 90vw;">
+			<div class="third">
+				<div class="third_right">再来一单</div>
+				
+			</div>
+		</div>
+		<div class="order_paper">
+			<div class="first">
+				<div class="imgAndWord">
+					<img src="https://cube.elemecdn.com/a/32/25fe29dd4b6355a9017e2172908b8jpeg.jpeg?x-oss-process=image/format,webp/resize,w_64,h_64,m_fixed" >
+					<div class="first_word">
+						<p>桃太丸蛋包饭(浑南二小店)&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+						<p class="timee">2020-09-08&nbsp;&nbsp;19:36</p>
+					</div>
+				</div>
+				
+				<div class="first_state">
+					订单已送达
+				</div>
+			</div>
+			<hr style="width: 90vw;">
+			<div class="second">
+				<div class="second_left">黑胡椒蛋包饭</div>
+				<div>￥18.80</div>
+			</div>
+			<hr style="width: 90vw;">
+			<div class="third">
+				<div class="third_right">再来一单</div>
+				
+			</div>
+		</div>
+		<div class="order_paper">
+			<div class="first">
+				<div class="imgAndWord">
+					<img src="https://cube.elemecdn.com/a/32/25fe29dd4b6355a9017e2172908b8jpeg.jpeg?x-oss-process=image/format,webp/resize,w_64,h_64,m_fixed" >
+					<div class="first_word">
+						<p>桃太丸蛋包饭(浑南二小店)&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+						<p class="timee">2020-09-08&nbsp;&nbsp;19:36</p>
+					</div>
+				</div>
+				
+				<div class="first_state">
+					订单已送达
+				</div>
+			</div>
+			<hr style="width: 90vw;">
+			<div class="second">
+				<div class="second_left">黑胡椒蛋包饭</div>
+				<div>￥18.80</div>
+			</div>
+			<hr style="width: 90vw;">
+			<div class="third">
+				<div class="third_right">再来一单</div>
+				
+			</div>
+		</div>
+		</div>
+		<div class="footer">
+				<div class="item">
+					<i class="fa fa-home"></i>
+					<p>首页</p>
+				</div><div class="item">
+					<i class="fa fa-compass"></i>
+					<p>发现</p>
+				</div><div class="item" id="dingdan">
+					<i class="fa fa-file-text-o"></i>
+					<p>订单</p>
+				</div><div class="item">
+					<i class="fa fa-user"></i>
+					<p>我的</p>
+				</div>
+			</div>
+		
+	</body>
+</html>

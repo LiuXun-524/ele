@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<style>
+			.wrapper{
+				width: 100vw;
+				height: 100vh;
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				overflow: auto;
+				height: 800vw;
+			}
+			.title{
+				width: 100vw;
+				height: 13.3vw;
+				background-color: rgb(49,144,232);
+				font-size: 5vw;
+				color: white;
+				font-weight: bold;
+				text-align: center;
+				line-height: 13.3vw;
+			}
+			.remainTime{
+				width: 100vw;
+				height: 43.2vw;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				font-size: 4vw;
+			}
+			.remainTime .remainTime_num{
+				height: 28.8vw;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.remainTime .remainTime_num .remainTime_num_word{
+				color: rgb(153,153,153);
+				font-size: 3.8vw;
+				margin-top: 3vw;
+			}
+			#activeTime{
+				font-size: 7vw;
+			}
+			hr{
+				width: 90vw;
+			}
+			.foodInfo{
+				width: 90vw;
+				display: flex;
+				justify-content: space-between;
+			}
+			.foodInfo .busName{
+				display: flex;
+			}
+			.foodInfo .busName .more{
+				color: darkgray;
+			}
+			.foodInfo  .foodPrice{
+				color: red;
+			}
+			.otherPay{
+				width: 100vw;
+				height: 10vw;
+				line-height: 10vw;
+				font-size: 3.5vw;
+				color: darkgray;
+				background-color: rgb(245,245,245);
+				padding-left: 10vw;
+			}
+			.alAndWe{
+				width: 90vw;
+				height: 33.6vw;
+				/* border: 1px solid black; */
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+			.alAndWe .ali,.alAndWe .wechat{
+				display: flex;
+				height: 16.8vw;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.alAndWe img{
+				width: 32vw;
+			}
+			.alAndWe i{
+				font-size: 6vw;
+				color: rgb(236,236,236);
+			}
+			.lasBtn{
+				width: 100vw;
+				height: 100vw;
+				background-color: rgb(245,245,245);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.lasBtn div{
+				width: 90vw;
+				height: 10.4vw;
+				background-color: rgb(76,217,100);
+				margin-top: 5vw;
+				text-align: center;
+				line-height: 10.4vw;
+				font-size: 4.3vw;
+				color: white;
+				border-radius: 0.6em;
+			}
+		</style>
+		<script type="text/javascript">
+			
+				function show(obj){
+					console.log(obj);
+					var childrens=obj.children;
+					console.log(childrens);
+					var uncle = obj.parentElement.children;
+					console.log(uncle);
+					
+					uncle[0].children[1].style.color="rgb(236,236,236)";
+					uncle[2].children[1].style.color="rgb(236,236,236)";
+					
+					childrens[1].style.color="rgb(76,217,100)";
+				};
+			
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- 在线支付头部 -->
+			<div class="title">
+				在线支付
+			</div>
+			<!-- 剩余时间和商品详情 -->
+			<div class="remainTime">
+				<div class="remainTime_num">
+					<p class="remainTime_num_word">剩余支付时间</p>
+					<p id="activeTime">00:14:58</p>
+					
+				</div>
+				<div><hr></div>
+				<div class="foodInfo">
+					
+					<div class="busName">
+						桃太丸蛋包饭(浑南二小店)...
+						<div class="more"> 详情</div>
+					</div>
+					<div class="foodPrice">
+						￥18.80
+					</div>
+				</div>
+			</div>
+			<!-- 其他支付 -->
+			
+			<div class="otherPay">
+				其他支付
+			</div>
+			<!-- 两种支付方式 -->
+			<div class="alAndWe">
+				<div class="ali" onclick="show(this)">
+					<img src="images/alipay.png" >
+					<i class="fa fa-check-circle hide"></i>
+				</div>
+				<hr >
+				<div class="wechat" onclick="show(this)">
+					<img src="images/wechat.png" >
+					<i class="fa fa-check-circle hide"></i>
+				</div>
+			</div>
+			<!-- 按钮 -->
+			<div class="lasBtn">
+				<div>确认支付</div>
+			</div>
+		</div>
+	</body>
+</html>

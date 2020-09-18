@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<style>
+			.wrapper{
+				width: 100vw;
+				height: 100vh;
+				/* border: 1px solid #C4C7CE; */
+				box-sizing: border-box;
+				
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				overflow: auto;
+				height: 800vw;
+			}
+			.header{
+				height: 12vw;
+				width: 100vw;
+				line-height: 12vw;
+				text-align: center;
+				background-color: rgb(0,151,255);
+				color: white;
+				font-size: 4.5vw;
+				display: flex;
+				justify-content: space-around;
+			}
+			.header .all{
+				text-decoration: underline;
+			}
+			.footer{
+				width: 100vw;
+				height: 13.5vw;
+				border-top: 1px solid #808080;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				display: flex;
+				justify-content: space-around;
+				background-color: white;
+			}
+			.item{
+				
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				color: #A0A0A0;
+				
+			}
+			.footer .item i{
+				font-size: 5.5vw;
+				
+			}
+			.footer .item p{
+				font-size:3vw ;
+				
+			}
+			.footer .item:hover{
+				color: rgb(0,168,255);
+			}
+			#fourA{
+				/* position: relative;
+				top: 26vw; */
+				
+				display: flex;
+				justify-content: space-around;
+				width: 100vw;
+				height: 9.9vw;
+				/* border:  1px solid #000000; */
+				line-height: 9.9vw;
+			}
+			.aa a{
+				font-size: 3.5vw;
+				
+			}
+			.aa a:link{
+				color: rgb(102,102,102);
+			}
+			.aa a:visited{
+				color: rgb(102,102,102);
+			}
+			.aa a:hover{
+				color: rgb(51,51,51);
+				font-weight: bold;
+			}
+			.aa a:active{
+				color: rgb(51,51,51);
+				font-weight: bold;
+			}
+			#a1{
+				color: rgb(51,51,51);
+				font-weight: bold;
+			}
+			.product{
+				width: 95vw;
+				height: 185vw;
+				/* border: 1px solid red; */
+				margin-top: 6vw;
+				margin-left: 2vw;
+			}
+			.product .product-item{
+				width: 95vw;
+				height: 45vw;
+				background-color: #FFFFFF;
+				  /* border: 1px solid red; */
+				display: flex;
+				
+				flex-direction: row;
+			}
+			.product-item .item-1{
+				flex: 1; 
+				/* border: 1px solid red; */
+				width: 16.3vw;
+			}
+			.product-item .item-1 img{
+				width: 16.3vw;
+				}
+			.product-item .item-2{
+				flex: 4;
+				/* border: 1px solid red; */
+				padding-left: 2vw;
+			}
+			/* .product-item .item-2 ul li{
+				font-size: 4vw;
+			} */
+			.product-item .item-2 ul li i{
+				margin-right: 0.8vw;
+				font-size: 3vw;
+				color: #fec80e;
+			}
+			.busName{
+				font-size: 4vw;
+				font-weight: bold;
+				/* border: 1px solid blue; */
+			}
+			.busStar{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-top: 2vw;
+			}
+			.busStar span{
+				font-size: 3vw;
+				/* border: 1px solid blue; */
+			}	
+			.busDeli{
+				font-size: 3.1vw;
+				margin-top: 1.5vw;
+				
+				/* border: 1px solid blue; */
+			}
+			.busDeli span{
+				color: darkgray;
+				margin-left:1vw;
+				margin-right: 1vw;
+			}
+			.busCate{
+				margin-top: 3vw;
+			}
+			.busCate span{
+				border: 1px solid darkgray;
+				font-size: 2.6vw;
+			}
+			.busActivi{
+				font-size: 3vw;
+				color: rgb(102,102,102);
+				margin-bottom: 1.5vw;
+			}
+			#busActivi{
+				margin-top: 4vw;
+			}
+			.jian{
+				color: white;
+				width: 1.3em;
+				height: 1.3em;
+				text-align: center;
+				border-radius: 20%;
+				background-color: rgb(240,115,115);
+				display: inline-block;
+			}
+			.pei{
+				color: white;
+				width: 1.3em;
+				height: 1.3em;
+				text-align: center;
+				border-radius: 20%;
+				background-color: rgb(112,188,70);
+				display: inline-block;
+			}
+			.product-item .item-3{
+				flex: 1.5;
+				/* border: 1px solid red; */
+				text-align: right;
+			}
+			.line1{
+				font-size: 3vw;
+				margin-top: 2vw;
+				
+			}
+			.fengniao{
+				margin-top: 1.5vw;
+			}
+			.fengniao span{
+				background-color: rgb(0,153,255);
+				border: 1px solid rgb(99,191,255);
+				color: white;
+				font-size: 2.5vw;
+			}
+			.distance{
+				font-size: 3vw;
+				margin-top: 2vw;
+				color: rgb(153,153,153);
+			}
+			.activi{
+				font-size: 3vw;
+				color: rgb(153,153,155);
+				margin-top: 3.5vw;
+			}
+			.middle{
+				width: 100vw;
+				height: 800vw;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="all">
+					全部
+				</div><div >
+					面食粥店
+				</div><div >
+					简餐便当
+				</div><div >
+					汉堡披萨
+				</div>
+			</div>
+			<!-- 四个标签 -->
+			<div id="fourA">
+				<div class="aa" >
+					<a id="a1" href="#" class="fa fa-caret-down">好评优先</a>
+				</div>
+				<div class="aa">
+					<a href="#">距离最近</a>
+				</div>
+				<div class="aa">
+					<a href="#">销量最高</a>
+				</div>
+				<div class="aa">
+					<a href="#">筛选 <i class="fa fa-filter"></i></a>
+				</div>
+			</div>
+			<!-- 四个标签结束 -->
+			<div class="middle">
+				<!-- 商家 -->
+				<div class="product">
+				<div class="product-item">
+				<div class="item-1">
+					<img src="https://cube.elemecdn.com/1/83/90775B9424D71806EC7BB0FFA383Fpng.png?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed" >
+				</div>
+				<div class="item-2">
+					<ul>
+						<li class="busName">玩家轿子(令闻店)</li>
+						<li class="busStar">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<span>4.9 &nbsp; 月销售345单</span>
+						</li>
+						<li class="busDeli">￥15起送<span>|</span>免配送费</li>
+						<li class="busCate"><span>各种轿子</span></li>
+						<li class="busActivi" id="busActivi">
+							<div class="jian">
+							减
+							</div>
+						饿了么新用户立减9元</li>
+						<li class="busActivi">
+							<div class="pei">
+							配
+							</div>
+							配送费立减3元
+							</li>
+					</ul>
+				</div><div class="item-3">
+					<ul>
+						<li class="line1"><i class="fa fa-ellipsis-h"></i></li>
+						<li class="fengniao">
+							<span >
+							蜂鸟专送
+							</span>
+						</li>
+						<li class="distance">3.22km|30分钟</li>
+						<li style="color: white;margin-top: 5vw;">。</li>
+						<li class="activi">6个活动&nbsp;&nbsp;<i class="fa fa-caret-down"></i></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="product-item">
+				<div class="item-1">
+					<img src="https://cube.elemecdn.com/1/83/90775B9424D71806EC7BB0FFA383Fpng.png?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed" >
+				</div>
+				<div class="item-2">
+					<ul>
+						<li class="busName">玩家轿子(令闻店)</li>
+						<li class="busStar">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<span>4.9 &nbsp; 月销售345单</span>
+						</li>
+						<li class="busDeli">￥15起送<span>|</span>免配送费</li>
+						<li class="busCate"><span>各种轿子</span></li>
+						<li class="busActivi" id="busActivi">
+							<div class="jian">
+							减
+							</div>
+						饿了么新用户立减9元</li>
+						<li class="busActivi">
+							<div class="pei">
+							配
+							</div>
+							配送费立减3元
+							</li>
+					</ul>
+				</div><div class="item-3">
+					<ul>
+						<li class="line1"><i class="fa fa-ellipsis-h"></i></li>
+						<li class="fengniao">
+							<span >
+							蜂鸟专送
+							</span>
+						</li>
+						<li class="distance">3.22km|30分钟</li>
+						<li style="color: white;margin-top: 5vw;">。</li>
+						<li class="activi">6个活动&nbsp;&nbsp;<i class="fa fa-caret-down"></i></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="product-item">
+				<div class="item-1">
+					<img src="https://cube.elemecdn.com/1/83/90775B9424D71806EC7BB0FFA383Fpng.png?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed" >
+				</div>
+				<div class="item-2">
+					<ul>
+						<li class="busName">玩家轿子(令闻店)</li>
+						<li class="busStar">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<span>4.9 &nbsp; 月销售345单</span>
+						</li>
+						<li class="busDeli">￥15起送<span>|</span>免配送费</li>
+						<li class="busCate"><span>各种轿子</span></li>
+						<li class="busActivi" id="busActivi">
+							<div class="jian">
+							减
+							</div>
+						饿了么新用户立减9元</li>
+						<li class="busActivi">
+							<div class="pei">
+							配
+							</div>
+							配送费立减3元
+							</li>
+					</ul>
+				</div><div class="item-3">
+					<ul>
+						<li class="line1"><i class="fa fa-ellipsis-h"></i></li>
+						<li class="fengniao">
+							<span >
+							蜂鸟专送
+							</span>
+						</li>
+						<li class="distance">3.22km|30分钟</li>
+						<li style="color: white;margin-top: 5vw;">。</li>
+						<li class="activi">6个活动&nbsp;&nbsp;<i class="fa fa-caret-down"></i></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="product-item">
+				<div class="item-1">
+					<img src="https://cube.elemecdn.com/1/83/90775B9424D71806EC7BB0FFA383Fpng.png?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed" >
+				</div>
+				<div class="item-2">
+					<ul>
+						<li class="busName">玩家轿子(令闻店)</li>
+						<li class="busStar">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<span>4.9 &nbsp; 月销售345单</span>
+						</li>
+						<li class="busDeli">￥15起送<span>|</span>免配送费</li>
+						<li class="busCate"><span>各种轿子</span></li>
+						<li class="busActivi" id="busActivi">
+							<div class="jian">
+							减
+							</div>
+						饿了么新用户立减9元</li>
+						<li class="busActivi">
+							<div class="pei">
+							配
+							</div>
+							配送费立减3元
+							</li>
+					</ul>
+				</div><div class="item-3">
+					<ul>
+						<li class="line1"><i class="fa fa-ellipsis-h"></i></li>
+						<li class="fengniao">
+							<span >
+							蜂鸟专送
+							</span>
+						</li>
+						<li class="distance">3.22km|30分钟</li>
+						<li style="color: white;margin-top: 5vw;">。</li>
+						<li class="activi">6个活动&nbsp;&nbsp;<i class="fa fa-caret-down"></i></li>
+						
+					</ul>
+				</div>
+			</div>
+			</div>
+			</div>
+			
+			<!-- 脚部 -->
+			<div class="footer">
+				<div class="item">
+					<i class="fa fa-home"></i>
+					<p>首页</p>
+				</div><div class="item">
+					<i class="fa fa-compass"></i>
+					<p>发现</p>
+				</div><div class="item">
+					<i class="fa fa-file-text-o"></i>
+					<p>订单</p>
+				</div><div class="item">
+					<i class="fa fa-user"></i>
+					<p>我的</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

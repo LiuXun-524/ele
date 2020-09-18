@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<style type="text/css">
+			.wrapper{
+				width: 100vw;
+				height: 100vh;
+				/* border: 1px solid #C4C7CE; */
+				box-sizing: border-box;
+				
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				overflow: auto;
+				height: 800vw;
+			}
+			.qrdd{
+				width: 100vw;
+				height: 12vw;
+				line-height: 12vw;
+				background-color: rgb(33,179,254);
+				color: white;
+				font-size: 4.8vw;
+				
+				/* display: flex;
+				justify-content: cen; */
+			}
+			.qrdd div{
+				display: inline-block;
+				margin-left: 33vw;
+				font-weight: 800;
+			}
+			.qrdd i{
+				
+				margin-left: 3vw;
+				
+			}
+			.loc{
+				width: 100vw;
+				height: 24vw;
+				border: 1px solid rgb(33,179,254);
+				display: flex;
+				flex-direction: column;
+				
+				background-color: rgb(33,179,254);
+				color: white;
+			}
+			.loc div{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				margin-left: 4vw;
+			}
+			 .one{
+				font-size: 4vw;
+				font-weight: 100;
+				color: rgb(205,237,255);
+				margin-bottom: 1vw;
+			}
+			 .two{
+				font-size: 6vw;
+				font-weight: bold;
+			}
+			 .third{
+				 margin-top: 1vw;
+				font-size: 3.8vw;
+				color: rgb(230,247,255);
+			}
+			.towInfo{
+				width: 100vw;
+				height: 27.2vw;
+				background-color: rgb(33,179,254);
+				display: flex;
+				justify-content: space-around;
+			}
+			.towInfo .items{
+				width: 94vw;
+				height: 27.2vw;
+				background-color: rgb(255,255,255);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.towInfo .items .item_1{
+				width: 83vw;
+				height: 13.6vw;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				font-size: 4vw;
+				line-height: 13.6vw;
+				/* border: 1px solid black; */
+			}
+			.arrBlue{
+				color: rgb(14,173,255);
+			}.arrBlue i{
+				color: rgb(211,211,216);
+			}
+			.mid{
+				width: 100vw;
+				height: 300vw;
+				background-color: rgb(33,179,254);
+				display: flex;
+				justify-content: space-around;
+			}
+			.midinner{
+				margin-top: 2vw;
+				width: 94vw;
+				height: 300vw;
+				background-color: rgb(255,255,255);
+				display: flex;
+				justify-content: space-around;
+			}
+			.midinnermid{
+				width: 83vw;
+				height: 300vw;
+				/* border: 1px solid black; */
+			}
+			.busiName{
+				/* border: 1px solid black; */
+				font-size: 4.6vw;
+				font-weight: bold;
+				margin-top: 4vw;
+				color: rgb(51,51,51);
+			}
+			.busiName span{
+				font-size: 3.5vw;
+				font-weight: 500;
+			}
+			.midinnermid .food img{
+				width: 9.9vw;
+			}
+			hr{
+				margin-top: 4vw;
+			}
+			.midinnermid .food{
+				margin-top: 4vw;
+				height: 9.9vw;
+				line-height: 9.9vw;
+			}
+			.foodInfo{
+				
+				display: flex;
+				justify-content: space-between;
+				font-size: 3.8vw;
+			}
+			.foodInfo .foodName{
+				text-align: center;
+				display: flex;
+				flex-direction: row;
+			}
+			.foodInfo .foodName span{
+				margin-left: 2vw;
+			}
+			.coverr{
+				/* border: 1px solid black; */
+				height: 9.9vw;
+				display: flex;
+				justify-content: space-between;
+				margin-top: 4vw;
+				align-items: center;
+				font-size: 3.8vw;
+			}
+			.baozhuang{
+				display: flex;
+			}
+			.baoIcon{
+				border: 1px solid rgb(131,149,174);
+				background-color: rgb(240,243,246);
+				font-size: 3vw;
+				height: 4vw;
+				margin-top: 0.8vw;
+				color: rgb(131,149,190);
+			}
+			.baozhuang_price{
+				margin-left: 4vw;
+			}
+			.diver_price{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 3.8vw;
+				/* border: 1px solid black; */
+				height: 9.9vw;
+			}
+			.diver_price span{
+				text-decoration:line-through;
+				color: darkgray;
+			}
+			.busBonus{
+				height: 9.9vw;
+				/* border: 1px solid black; */
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-size: 3.8vw;
+			}
+			.IconAndWord{
+				display: flex;
+				align-items: center;
+				height: 9.9vw;
+				/* border: 1px solid black; */
+				
+			}
+			.bonusIcon{
+				font-size: 2.8vw;
+				height: 3.5vw;
+				width: 6.8vw;
+				color: white;
+				background-color: rgb(240,115,115);
+			}
+			.bonusWord{
+				margin-left: 3vw;
+			}
+			.bonusPrice{
+				color: rgb(255,95,22);
+			}
+			.juan{
+				display: flex;
+				height: 9.9vw;
+				align-items: center;
+				justify-content: space-between;
+				font-size: 3.8vw;
+			}
+			.juanIcon{
+				display: flex;
+				/* border: 1px solid black; */
+			}
+			.juanIcon div{
+				/* border: 1px solid black; */
+				color: white;
+				width: 17vw;
+				font-size: 3.2vw;
+				background-color: rgb(255,91,22);
+				text-align: center;
+			}
+			.juanIcon_gray{
+				color: darkgray;
+				font-size: 5vw;
+			}
+			.price_sum{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				height: 9.9vw;
+				font-size: 3.8vw;
+			}
+			.price_sum .price_sum_left{
+				color: lightgray;
+			}
+			.price_sum .price_sum_right{
+				display: flex;
+			}
+			.price_sum .price_sum_right .xiaoji{
+				margin-top: 1vw;
+			}
+			.price_sum .price_sum_right .xiaoji_num{
+				font-size: 5vw;
+			}
+			.footer{
+				width: 100vw;
+				height: 12vw;
+				background-color: rgb(60,60,60);
+				position: fixed;
+				bottom: 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.footer .footer_price{
+				color: white;
+				font-size: 4.5vw;
+				margin-left: 2vw;
+			}
+			.footer .footer_price span{
+				font-size: 3.5vw;
+				color: rgb(153,153,153);
+			}
+			.footer .footer_goToPay{
+				width: 28vw;
+				height: 12vw;
+				line-height: 12vw;
+				text-align: center;
+				color: white;
+				font-size: 4.5vw;
+				background-color: rgb(0,224,103);
+			}	
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="qrdd">
+				<i class="fa fa-angle-left "></i>
+				<div>
+					确认订单
+				</div>
+			</div>
+			
+			<div class="loc">
+				<div>
+					<p class="one">订单配送至</p>
+					<p class="two">东软b园g2公寓西门&nbsp;&nbsp;
+						<i class="fa fa-angle-right"></i></p>
+					<p class="third">刘(先生)&nbsp;&nbsp;15566699898</p>
+				</div>
+			</div>
+			<!-- 送达时间、支付方式 -->
+			<div class="towInfo">
+				<div class="items">
+					<div class="item_1">
+						<div class="arrTime">
+							送达时间
+						</div>
+						<div class="arrBlue">
+							尽快送达(15:40送达)&nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+						</div>
+					</div>
+					<div class="item_1">
+						<div class="arrTime">
+							支付方式
+						</div>
+						<div class="arrBlue">
+							在线支付
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 店名、商品价格 -->
+			<div class="mid">
+				<div class="midinner">
+					<div class="midinnermid">
+						<div class="busiName">
+						桃太丸包饭<span>(浑南二小店)</span>
+						</div>
+						<hr>
+						<!-- food详情 -->
+						<div class="food">
+							<div class="foodInfo">
+								<div class="foodName">
+							<img src="https://cube.elemecdn.com/b/2b/c71c8d1c28291c4431b44d7981f72jpeg.jpeg?x-oss-process=image/format,webp/resize,w_72,h_72,m_fixed" >
+									<span >
+										黑胡椒蛋包饭
+									</span>
+								</div>
+								<div class="foodNum">
+									x1
+								</div>
+								<div class="foodPrice">
+									￥26.8
+								</div>
+							</div>
+						</div>
+						<!-- food详情结束 -->
+						<!-- 包装 -->
+						<div class="coverr">
+							<div class="baozhuang">
+								<div class="baoIcon">
+									包装
+								</div>
+								<div class="baozhuang_price">
+									包装费
+								</div>
+							</div>
+							<div class="baoPrice">
+								￥2
+							</div>
+						</div>
+						<!-- 包装结束 -->
+						<!-- 配送费 -->
+						<div class="diver_price">
+							<div class="diver_word">
+								配送费
+							</div>
+							<div class="diver_price_num">
+								<span>￥2</span> &nbsp;&nbsp;&nbsp;&nbsp;￥0
+							</div>
+						</div>
+						<!-- 配送费结束 -->
+						<!-- 店铺满减 -->
+						<div class="busBonus">
+							<div class="IconAndWord">
+								<div class="bonusIcon">
+									满减
+								</div>
+								<div class="bonusWord">
+									店铺满减
+								</div>
+							</div>
+							<div class="bonusPrice">
+								-￥10
+							</div>
+						</div>
+						<!-- 店铺满减结束 -->
+						<!-- 红包抵用劵 -->
+						<div class="juan">
+							<div class="juanWord">
+								红包/抵用劵
+							</div>
+							<div class="juanIcon">
+								<div>
+									<i class="fa fa-envelope juanIcon_red"></i>
+									1个可用
+								</div>
+								&nbsp;&nbsp;&nbsp;
+								<i class="fa fa-angle-right juanIcon_gray"></i>
+							</div>
+						</div>
+						<!-- 红包抵用劵结束 -->
+						<hr>
+						<!-- 优惠说明 -->
+						<div class="price_sum">
+							<div class="price_sum_left">
+								优惠说明<i class="fa  fa-question-circle-o "></i>
+							</div>
+							<div class="price_sum_right">
+								<div class="xiaoji">
+									小计￥
+								</div>
+								<div class="xiaoji_num">
+									18.8
+								</div>
+							</div>
+						</div>
+						<!-- 优惠说明结束 -->
+						
+					</div>
+					
+					
+				</div>
+				
+				
+			</div>
+			<!-- footer -->
+			<div class="footer">
+				<div class="footer_price">
+					￥18.8 <span>|已优惠￥10</span>
+				</div>
+				<div class="footer_goToPay">
+					去支付
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

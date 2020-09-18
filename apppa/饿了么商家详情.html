@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<style type="text/css">
+	.container{
+		width: 100vw;
+		height: 100vh;
+	}
+	.footer{
+		width: 100vw;
+		height: 14vw;
+		background-color: #008CFF;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		flex-direction: row;
+	}
+	.footer .cart-left{
+		flex: 2;
+		background-color: #505051;
+		display: flex;
+	}
+	.footer .cart-right{
+		flex: 1;
+		background-color: #38CA73;
+		
+	}
+	.footer .cart-car{
+		box-sizing: border-box;
+		width: 16vw;
+		height: 16vw;
+		border: 1.5vw solid #444;
+		border-radius: 50%;
+		background-color: #3190e8;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		margin-top: -4vw;
+		margin-left: 3vw;
+	}
+	.footer .cart-car .cart-icon{
+		font-size: 7vw;
+		color: white;
+		margin-top: -1vw;
+	}
+	.footer .cart-car .cart-icon .txt{
+		font-size: 3vw;
+		width: 5vw;
+		height: 5vw;
+		background-color: rgb(255,105,22);
+		position: absolute;
+		right: -1.5vw;
+		top: -1.5vw;
+		text-align: center;
+		border-radius: 50%;
+	}
+	.cart-right{
+		line-height: 14vw;
+		text-align: center;
+		color: white;
+		font-size: 4vw;
+		font-weight: bold;
+	}
+	.cart-info{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		font-size: 4vw;
+		color: white;
+	}
+	.header{
+		height: 26vw;
+		width: 100vw;
+		background-image: url(https://cube.elemecdn.com/7/4c/8e384d2c06fbaa2b2d5315bb007cbpng.png?x-oss-process=image/format,webp/resize,w_750);
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.header i{
+		font-size: 10vw;
+		color: white;
+		position: absolute;
+		left: 2vw;
+		top: 2vw;
+	}
+	.header img{
+		position: absolute;
+		top: 15vw;
+		width: 20vw;
+		border: 1px solid rgb(153,153,153);
+	}
+	.header_word{
+		height: 11vw;
+		line-height:5.5vw ;
+		/* border: 1px solid black; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 15vw;
+	}
+	.header_word .one{
+		font-size: 6vw;
+		font-weight: bold;
+	}
+	.header_word .two{
+		font-size: 3vw;
+		color: rgb(102,102,102);
+	}
+	.youhui{
+		width: 100vw;
+		height: 6.7vw;
+		line-height: 6.7vw;
+		font-size: 3vw;
+		display: flex;
+		justify-content: space-around;
+		margin-top: 2vw;
+	}
+	.youhui .youhui_juan{
+		width: 38vw;
+		background-color: rgb(255,229,120);
+		text-align: center;
+		color: rgb(89,69,25);
+	}
+	.youhui .youhui_juan span{
+		font-size: 3.5vw;
+		font-weight: 600;
+	}
+	.dianPuYouHui_outer{
+		display: flex;
+		justify-content: center;
+	}
+	.dianPuYouHui{
+		height: 9vw;
+		width: 80vw;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.dianPuYouHui .fourBonus{
+		width: 50vw;
+		/* border: 1px solid black; */
+		display: flex;
+		justify-content: space-around;
+		font-size: 2.5vw;
+	}
+	.dianPuYouHui .fourBonus span{
+		border: 1px solid darkgray;
+		color: red;
+		
+	}
+	.dianPuYouHui .dianPuYouHui_gray{
+		color: darkgray;
+		font-size: 3vw;
+	}
+	.say{
+		/* border: 1px solid black; */
+		height: 7vw;
+		line-height: 7vw;
+		text-align: center;
+		font-size: 3vw;
+		color: darkgray;
+	}
+	.threeCate {
+		height: 10vw;
+		width: 100vw;
+		display: flex;
+		justify-content: space-around;
+		font-size: 4vw;
+		font-weight: 600;
+		margin-top: 3vw;
+		line-height: 10vw;
+		/* border: 1px solid black; */
+	}
+	.threeCate .order{
+		width: 9vw;
+	}
+	#order1{
+		border-bottom: 1vw solid #008CFF;
+	}
+	/* 商品部分 */
+	.product{
+		width: 95vw;
+		height: 185vw;
+		/* border: 1px solid red; */
+		margin-top: 6vw;
+		margin-left: 2vw;
+	}
+	.product .product-item{
+		width: 95vw;
+		height: 20vw;
+		background-color: #FFFFFF;
+		  /* border: 1px solid red; */
+		display: flex;
+		
+		flex-direction: row;
+	}
+	.product-item .item-1{
+		flex: 1; 
+		/* border: 1px solid red; */
+		width: 16.3vw;
+	}
+	.product-item .item-1 img{
+		width: 16.3vw;
+		}
+	.product-item .item-2{
+		flex: 4;
+		/* border: 1px solid red; */
+		padding-left: 2vw;
+	}
+	/* .product-item .item-2 ul li{
+		font-size: 4vw;
+	} */
+	.product-item .item-2 ul li i{
+		margin-right: 0.8vw;
+		font-size: 3vw;
+		color: #fec80e;
+	}
+	.busName{
+		font-size: 4vw;
+		font-weight: bold;
+		/* border: 1px solid blue; */
+	}
+	.busStar{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 2vw;
+	}
+	.busStar span{
+		font-size: 3vw;
+		/* border: 1px solid blue; */
+		
+	}	
+	.busDeli{
+		font-size: 3.1vw;
+		margin-top: 1.5vw;
+		
+		/* border: 1px solid blue; */
+	}
+	.busDeli span{
+		color: red;
+		font-size: 4vw;
+		margin-left:1vw;
+		margin-right: 1vw;
+	}
+	.busCate{
+		margin-top: 3vw;
+	}
+	.busCate span{
+		border: 1px solid darkgray;
+		font-size: 2.6vw;
+	}
+	.busActivi{
+		font-size: 3vw;
+		color: rgb(102,102,102);
+		margin-bottom: 1.5vw;
+	}
+	#busActivi{
+		margin-top: 4vw;
+	}
+	.jian{
+		color: white;
+		width: 1.3em;
+		height: 1.3em;
+		text-align: center;
+		border-radius: 20%;
+		background-color: rgb(240,115,115);
+		display: inline-block;
+	}
+	.pei{
+		color: white;
+		width: 1.3em;
+		height: 1.3em;
+		text-align: center;
+		border-radius: 20%;
+		background-color: rgb(112,188,70);
+		display: inline-block;
+	}
+	.product-item .item-3{
+		flex: 1.5;
+		/* border: 1px solid red; */
+		text-align: right;
+	}
+	.line1{
+		font-size: 3vw;
+		margin-top: 2vw;
+		
+	}
+	.fengniao{
+		margin-top: 1.5vw;
+	}
+	.fengniao span{
+		background-color: rgb(0,153,255);
+		border: 1px solid rgb(99,191,255);
+		color: white;
+		font-size: 2.5vw;
+	}
+	.distance{
+		font-size: 3vw;
+		margin-top: 2vw;
+		color: rgb(153,153,153);
+	}
+	.activi{
+		font-size: 3vw;
+		color: rgb(153,153,155);
+		margin-top: 3.5vw;
+	}
+</style>
+
+	</head>
+	<body>
+<div class="container">
+	<!-- 头部 -->
+	<div class="header">
+		<i class="fa fa-angle-left"></i>
+		<img src="https://cube.elemecdn.com/a/32/25fe29dd4b6355a9017e2172908b8jpeg.jpeg?x-oss-process=image/format,webp/resize,w_150" >
+	</div>
+	<div class="header_word">
+		<p class="one">桃太丸蛋包饭(浑南二小店)
+		<i class="fa fa-caret-right"></i></p>
+		<p class="two"> 评价&nbsp;&nbsp;月售617单&nbsp;&nbsp;蜂鸟快送约34分钟</p>
+	</div>
+	<!-- 优惠券-->
+	<div class="youhui">
+		<div class="youhui_juan">
+			<span>￥4</span>&nbsp;&nbsp;&nbsp;&nbsp;<img  id="vipimg" src="https://cube.elemecdn.com/8/0e/4dd212d831becab6e3ebd484c0941jpeg.jpeg?x-oss-process=image/format,webp/resize,w_34" >
+			无门槛&nbsp;&nbsp;&nbsp;&nbsp;领取
+		</div>
+	</div>
+	<!-- 20减10 35减16 -->
+	<div class="dianPuYouHui_outer">
+		<div class="dianPuYouHui">
+		<div class="fourBonus">
+			<span>20减10</span>
+			<span>35减16</span>
+			<span>45减20</span>
+			<span>60减25</span>
+		</div>
+		<div class="dianPuYouHui_gray">
+			4个优惠	<i class="fa fa-caret-down"></i>
+		</div>
+		</div>
+	</div>
+	<!-- 公告 -->
+	<div class="say">
+		公告：只有鸡排、猪排、牛排、鸡腿，这些是包在蛋包饭外面的...
+	</div>
+	<!-- 点餐、评价、商家 -->
+	<div class="threeCate">
+		<div class="order" id="order1">
+			点餐
+		</div><div class="order">
+			评价
+		</div><div class="order">
+			商家
+		</div>
+	</div>
+	<hr >
+	<!-- 商品部分 -->
+	<div class="product">
+		<div class="product-item">
+		<div class="item-1">
+			<img src="https://cube.elemecdn.com/7/23/344984b25e01a4be13090f3ae061ajpeg.jpeg?x-oss-process=image/resize,m_lfit,w_140,h_140/watermark,g_se,x_4,y_4,image_YS8xYS82OGRlYzVjYTE0YjU1ZjJlZmFhYmIxMjM4Y2ZkZXBuZy5wbmc_eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsUF8yOA%3D%3D/quality,q_90/format,webp" >
+		</div>
+		<div class="item-2">
+			<ul>
+				<li class="busName">脆皮鸡蛋包饭</li>
+				<li class="busStar">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<span>鸡排盖在蛋包饭上...</span>
+				</li>
+				<li class="busDeli"><span>￥29.8</span></li>
+			</ul>
+		</div><div class="item-3">
+			<ul>
+				<li class="line1"><i class="fa fa-ellipsis-h"></i></li>
+				<li class="fengniao">
+					<span >
+					添加到车
+					</span>
+				</li>
+				<li class="distance">月售39份</li>
+				
+				
+				
+			</ul>
+		</div>
+	</div>
+	<div class="product-item">
+		<div class="item-1">
+			<img src="https://cube.elemecdn.com/0/9e/8caa02848d1900b57425570be1bebjpeg.jpeg?x-oss-process=image/resize,m_lfit,w_240/watermark,g_se,x_4,y_4,image_YS8xYS82OGRlYzVjYTE0YjU1ZjJlZmFhYmIxMjM4Y2ZkZXBuZy5wbmc_eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsUF8yOA%3D%3D/quality,q_90/format,webp" >
+		</div>
+		<div class="item-2">
+			<ul>
+				<li class="busName">脆皮鸡蛋包饭</li>
+				<li class="busStar">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<span>鸡排盖在蛋包饭上...</span>
+				</li>
+				<li class="busDeli"><span>￥29.8</span></li>
+			</ul>
+		</div><div class="item-3">
+			<ul>
+				<li class="line1"><i class="fa fa-ellipsis-h"></i></li>
+				<li class="fengniao">
+					<span >
+					添加到车
+					</span>
+				</li>
+				<li class="distance">月售39份</li>
+				
+				
+				
+			</ul>
+		</div>
+	</div>
+		<div class="product-item">
+			<div class="item-1">
+				<img src="https://cube.elemecdn.com/9/2d/f091daafbd348599d10999ea8054fjpeg.jpeg?x-oss-process=image/resize,m_lfit,w_140,h_140/watermark,g_se,x_4,y_4,image_YS8xYS82OGRlYzVjYTE0YjU1ZjJlZmFhYmIxMjM4Y2ZkZXBuZy5wbmc_eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsUF8yOA%3D%3D/quality,q_90/format,webp" >
+			</div>
+			<div class="item-2">
+				<ul>
+					<li class="busName">脆皮鸡蛋包饭</li>
+					<li class="busStar">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<span>鸡排盖在蛋包饭上...</span>
+					</li>
+					<li class="busDeli"><span>￥29.8</span></li>
+				</ul>
+			</div><div class="item-3">
+				<ul>
+					<li class="line1"><i class="fa fa-ellipsis-h"></i></li>
+					<li class="fengniao">
+						<span >
+						添加到车
+						</span>
+					</li>
+					<li class="distance">月售39份</li>
+					
+					
+					
+				</ul>
+			</div>
+		</div>
+		<div class="product-item">
+			<div class="item-1">
+				<img src="https://cube.elemecdn.com/7/23/344984b25e01a4be13090f3ae061ajpeg.jpeg?x-oss-process=image/resize,m_lfit,w_140,h_140/watermark,g_se,x_4,y_4,image_YS8xYS82OGRlYzVjYTE0YjU1ZjJlZmFhYmIxMjM4Y2ZkZXBuZy5wbmc_eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsUF8yOA%3D%3D/quality,q_90/format,webp" >
+			</div>
+			<div class="item-2">
+				<ul>
+					<li class="busName">脆皮鸡蛋包饭</li>
+					<li class="busStar">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<span>鸡排盖在蛋包饭上...</span>
+					</li>
+					<li class="busDeli"><span>￥29.8</span></li>
+				</ul>
+			</div><div class="item-3">
+				<ul>
+					<li class="line1"><i class="fa fa-ellipsis-h"></i></li>
+					<li class="fengniao">
+						<span >
+						添加到车
+						</span>
+					</li>
+					<li class="distance">月售39份</li>
+					
+					
+					
+				</ul>
+			</div>
+		</div>
+		<div class="product-item">
+			<div class="item-1">
+				<img src="https://cube.elemecdn.com/7/23/344984b25e01a4be13090f3ae061ajpeg.jpeg?x-oss-process=image/resize,m_lfit,w_140,h_140/watermark,g_se,x_4,y_4,image_YS8xYS82OGRlYzVjYTE0YjU1ZjJlZmFhYmIxMjM4Y2ZkZXBuZy5wbmc_eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsUF8yOA%3D%3D/quality,q_90/format,webp" >
+			</div>
+			<div class="item-2">
+				<ul>
+					<li class="busName">脆皮鸡蛋包饭</li>
+					<li class="busStar">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<span>鸡排盖在蛋包饭上...</span>
+					</li>
+					<li class="busDeli"><span>￥29.8</span></li>
+				</ul>
+			</div><div class="item-3">
+				<ul>
+					<li class="line1"><i class="fa fa-ellipsis-h"></i></li>
+					<li class="fengniao">
+						<span >
+						添加到车
+						</span>
+					</li>
+					<li class="distance">月售39份</li>
+					
+					
+					
+				</ul>
+			</div>
+		</div>
+		</div>
+	
+	
+	<!-- 页脚部分 -->
+	<div class="footer">
+		 <div class="cart-left">
+			 <!-- 车-->
+			 <div class="cart-car">
+				<div class="cart-icon">
+					<i class="fa fa-shopping-cart"></i>
+					<div class="txt">
+						3
+					</div>
+				</div>
+			 </div>
+			 
+			 
+			 <!-- 文字-->
+			 <div class="cart-info">
+				<p>￥12.88</p>
+				<p>另需配送费3元</p> 
+			 </div>
+		 </div>
+		 <div class="cart-right">
+			去结算
+		 </div>
+	</div>
+</div>
+		</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<title>用户注册</title>
+	<style type="text/css">
+			.container{
+				width: 100vw;
+				height: 100vh;
+			}
+			.header{
+				width: 100vw;
+				height: 12vw;
+				background-color: #008CFF;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 4.8vw;
+				font-weight: 500;
+				color: white;
+			}
+			.footer{
+				width: 100vw;
+				height: 13.5vw;
+				border-top: 1px solid lightgray;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				display: flex;
+				justify-content: space-around;
+				background-color: white;
+			}
+			.item{
+				
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				color: #A0A0A0;
+				
+			}
+			.footer .item i{
+				font-size: 5.5vw;
+				
+			}
+			.footer .item p{
+				font-size:1vw ;
+				
+			}
+			.footer .item:hover{
+				color: rgb(0,168,255);
+			}
+			.middle{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				
+			}
+			.top{
+				width: 90vw;
+				height: 52vw;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				font-size: 3vw;
+				font-weight: 600;
+			}
+			.top div input{
+				border: 0px;
+			}
+			.mid{
+				width: 90vw;
+				height: 9vw;
+				background-color: #38CA73;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				border-radius: 5%;
+				color: white;
+				font-size: 3.8vw;
+				font-weight: 600;
+			}
+			.sex{
+				margin-bottom: 1vw;
+			}
+			.telno{
+				margin-top: 2vw;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				用户注册
+			</div>
+			<div class="middle">
+				<div class="top">
+					<div class="telno">
+						<span>手机号码:</span>
+						<input type="tel" placeholder="手机号码" />
+					</div>
+					<div class="passwd">
+						<span>密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<input type="password" placeholder="密码" />
+					</div>
+					<div class="telno">
+						<span>确认密码:</span>
+						<input type="password" placeholder="确认密码" />
+					</div>
+					<div class="telno">
+						<span>用户姓名:</span>
+						<input type="name" placeholder="用户姓名" />
+					</div>
+					<div class="sex">
+						<span>性别：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<input type="radio" name="sex" />男
+						<input type="radio" name="sex" />女
+					</div>
+				</div>
+				<div class="mid">
+					<span>注册</span>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="item">
+					<i class="fa fa-home"></i>
+					<p>首页</p>
+				</div>
+				<div class="item">
+					<i class="fa fa-compass"></i>
+					<p>发现</p>
+				</div>
+				<div class="item">
+					<i class="fa fa-file-text-o"></i>
+					<p>订单</p>
+				</div>
+				<div class="item">
+					<i class="fa fa-user"></i>
+					<p>我的</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

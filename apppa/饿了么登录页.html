@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<style type="text/css">
+			.wrapper{
+				width: 100vw;
+				height: 100vh;
+				/* border: 1px solid #C4C7CE; */
+				box-sizing: border-box;
+				
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: center;
+				overflow: auto;
+				height: 800vw;
+			}
+			.footer{
+				width: 100vw;
+				height: 13.5vw;
+				border-top: 1px solid #808080;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				display: flex;
+				justify-content: space-around;
+				background-color: white;
+			}
+			.item{
+				
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				color: #A0A0A0;
+				
+			}
+			.footer .item i{
+				font-size: 5.5vw;
+				
+			}
+			.footer .item p{
+				font-size:3vw ;
+				
+			}
+			.footer .item:hover{
+				color: rgb(0,168,255);
+			}
+			.header{
+				text-align: center;
+				font-size: 5vw;
+				font-weight: 300;
+				height: 12vw;
+				width: 100vw;
+				color: white;
+				background-color: rgb(0,151,255);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				/* align-items: center; */
+			}
+			.logInfo{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				font-size: 3.3vw;
+				border: 1px;
+				/* border: 1px solid red; */
+				width: 100vw;
+				height: 29vw;
+				/* text-align: center; */
+			}
+			.tel ,.pass{
+				/* border: 1px solid black; */
+				display: flex;
+				justify-content: space-around;
+				/* text-align: center; */
+			}
+			.tel div, .pass div{
+				/* border: 1px solid blue; */
+				/* text-align: center; */
+				padding-top: 2vw;
+			}
+			.logInfo input{
+				width: 80vw;
+				height: 9vw;
+				 border: 1px solid white; 
+				font-size: 3.3vw;
+			}
+			.btn {
+				width: 90vw;
+				height: 26vw;
+				/* border: 1px solid black; */
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+			.btn div{
+				text-align: center;
+				line-height: 10vw;
+			}
+			.btn .log{
+				width: 90vw;
+				height: 10vw;
+				border: 1px solid green;
+				color: white;
+				font-size: 4vw;
+				font-weight: 600;
+				background-color: rgb(56,202,115);
+				border-radius: 4%;
+			}
+			.btn .reg{
+				width: 90vw;
+				height: 10vw;
+				border: 1px solid darkgray;
+				color: rgb(102,102,102);
+				font-size: 4vw;
+				font-weight: 800;
+				background-color: rgb(238,238,238);
+				border-radius: 4%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- 头部 -->
+			<div class="header">
+				<span >
+					用户登陆
+				</span>
+			</div>
+			<!-- 头部结束 -->
+			<!-- 输入部分 -->
+			<div class="logInfo">
+				<div class="tel">
+					<div>手机号：</div><input type="tel" placeholder="手机号码"/>
+				</div>
+				<div class="pass">
+					<div>密码：</div><input type="password" placeholder="密码"/>
+				</div>
+			</div>
+			<div class="btn">
+				<div class="log">
+					登陆
+					
+				</div>
+				<div class="reg">
+					去注册
+					
+				</div>
+				
+			</div>
+			<!-- 输入部分结束 -->
+			<!-- 尾部 -->
+			<div class="footer">
+			<div class="item">
+				<i class="fa fa-home"></i>
+				<p>首页</p>
+			</div><div class="item">
+				<i class="fa fa-compass"></i>
+				<p>发现</p>
+			</div><div class="item">
+				<i class="fa fa-file-text-o"></i>
+				<p>订单</p>
+			</div><div class="item">
+				<i class="fa fa-user"></i>
+				<p>我的</p>
+			</div>
+		</div>
+		<!-- 尾部结束 -->
+		</div>
+		
+	</body>
+</html>
